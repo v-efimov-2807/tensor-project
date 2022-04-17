@@ -1,7 +1,7 @@
 export function sliderHandle(slider, eventNode) {
 	const itemsNode = slider.querySelector('.slider__items');
 	const leftBtn = slider.querySelector('.slider__left-btn');
-	const rightBtn = slider.querySelector('.slider_right-btn');
+	const rightBtn = slider.querySelector('.slider__right-btn');
 	let allItems;
 	let firstItem;
 	let lastItem;
@@ -25,7 +25,7 @@ export function sliderHandle(slider, eventNode) {
 		itemsNode.appendChild(firstItem);
 	}
 
-	if(eventNode.classList.contains('slider_right-btn')) {
+	if(eventNode.classList.contains('slider__right-btn')) {
 		checkEnvironment();
 		itemsNode.insertBefore(lastItem, firstItem);
 	}
